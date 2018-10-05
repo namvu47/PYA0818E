@@ -1,0 +1,4 @@
+Chieu dai: 4
+Chieu rong:7
+Chu vi: 22
+Dien tich: 28

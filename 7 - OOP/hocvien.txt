@@ -1,0 +1,5 @@
+Ma hoc vien: test1
+Ho ten: Nguyen Van A
+Diem Toan: 9
+Diem Ly: 8
+Diem Hoa: 8.5
