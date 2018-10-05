@@ -1,14 +1,21 @@
 from Polymorphism.ex2.sachthamkhao import *
 from Polymorphism.ex2.sachgiaokhoa import *
 
-# print('---------------------------------------------------------')
-# print('Nhap thong tin sach giao khoa: (Ma sach, Ngay Nhap, Don gia, So Luong, Nha Xuat Ban, Tinh Trang) \n')
-# numberofsgk = int(input("Nhap so luong dau sach giao khoa: "))
-# for x in range(1, numberofsgk+1):
-#     globals()[f'dausachgk{x}'] = input(f"Thong tin sach giao khoa {x}: ").split(',')
-#     print ((sachgiaokhoa(*globals()[f'dausachgk{x}'])).__str__())
-#     print(f'Tong tien loai {x}: ' + (sachgiaokhoa(*globals()[f'dausachgk{x}'])).thanhtien())
+print('---------------------------------------------------------')
+print('Nhap thong tin sach giao khoa: (Ma sach, Ngay Nhap, Don gia, So Luong, Nha Xuat Ban, Tinh Trang) \n')
+numberofsgk = int(input("Nhap so luong dau sach giao khoa: "))
+for x in range(1, numberofsgk+1):
+    globals()[f'dausachgk{x}'] = input(f"Thong tin sach giao khoa {x}: ").split(',')
+    print ((sachgiaokhoa(*globals()[f'dausachgk{x}'])).__str__())
+    print(f'Tong tien loai {x}: ' + (sachgiaokhoa(*globals()[f'dausachgk{x}'])).thanhtien())
 
+outputstk = input('Nhap ten nha xuat ban: ')
+print (f'Cac ma sach cua nha xuat ban: {outputstk} \n')
+for i in range (1, numberofsgk+1):
+    if (globals()[f'dausachgk{i}'])[4] == outputstk:
+        print ((globals()[f'dausachgk{i}'])[0])
+    else:
+        pass
 
 print('---------------------------------------------------------')
 print('Nhap thong tin sach tham khao: (Ma sach, Ngay Nhap, Don gia, So Luong, Nha Xuat Ban, Thue) \n')
